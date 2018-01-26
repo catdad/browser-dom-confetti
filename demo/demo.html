@@ -16,6 +16,13 @@
       text-align: center;
     }
 
+    div {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
     button {
       position: relative;
       top: 60%;
@@ -30,6 +37,8 @@
   </style>
 </head>
 <body>
-  <button onclick="confetti(this)">Confetti!!</button>
+  <div>
+    <button onclick="confetti(this)">Confetti!!</button>
+  </div>
 </body>
 </html>
