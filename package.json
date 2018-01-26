@@ -4,6 +4,7 @@
   "description": "browser-dom-confetti",
   "main": "index.js",
   "scripts": {
+    "pretest": "npm run build",
     "test": "echo \"There are no tests yet, womp womp\"",
     "build": "webpack",
     "dev": "webpack-dev-server"
