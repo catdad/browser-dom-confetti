@@ -9,3 +9,12 @@ test:
 before_deploy:
   - npm run build
 
+deploy:
+  provider: releases
+  api_key:
+    secure: b2KM1RYNXArFFCgnoDNp2SJfXj3lxphSL6z3yPJPBPLg5vRZy3l5F+slzN7OHg+b2D+fD/KYaFcIQd5/D/dfzA4dQqcSUlwKiO13U5Uxr71Len0yzoomtkjn8mP4KQr5E2XMPkUonfvEPpjtPA6LJM9Cevc2rBIHvQv+HwAtazTAQkaftzVppDNwmRR1EJXN5uPzEN4T1VB0PP0Ap0RXsOulJ8lOpeKC1kC4IR5u5f6yCKG47ogTcHmILiu1XkC2AdxS8NtwC86KFLoXW7uC7jaTPAQ34Jlw+01zFFgu2jdENbnaaTqojT2erQtghhzvmnmiA/MC5UuSc8JiG28PmTdmz2eeprzQRYNkR3ljZ3PwlZApW6HjDMUJzg0mCFPLCH2/XDBlBhm6bzG5dl1BOuEzUpnw4tvOXlgPq/JJTJZjZggiHLYbiF90qGLGLv0568uzjA3qcqREcg7+5xBbS6QyLDIkaO702X0JYyYmTgJfJulnGxCBMj73nY7IiEVUAvlnjPA9w3f7FC1q+KU/Unn/frTe3tCeFVjPB/BtjuyfboCjrWR2NDisqMTLIRtzQXm0Q/uwSrb9UhmEjtRKmRfzzWio9jwTgpRMbB5c/w7UTg7lDMQVJshQWKwmEdErIKJsvuzX2KqYIFvEH65+9HU3kkj3g0FSBSS5WoH/ipY=
+  skip_cleanup: true
+  file: dist/index.js
+  on:
+    tags: true
+    repo: catdad/browser-dom-confetti
